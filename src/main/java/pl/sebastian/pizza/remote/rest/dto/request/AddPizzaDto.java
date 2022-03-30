@@ -4,14 +4,14 @@ import java.util.List;
 
 public class AddPizzaDto {
     private String name;
-    private List<AddSizeDto> size;
+    private List<AddSizeDto> addSizeDtoList;
 
     public AddPizzaDto() {
     }
 
     public AddPizzaDto(String name, List<AddSizeDto> size) {
         this.name = name;
-        this.size = size;
+        this.addSizeDtoList = size;
     }
 
     public String getName() {
@@ -22,11 +22,11 @@ public class AddPizzaDto {
         this.name = name;
     }
 
-    public List<AddSizeDto> getSize() {
-        return size;
+    public List<AddSizeDto> getAddSizeDtoList() {
+        return addSizeDtoList;
     }
 
-    public void setSize(List<AddSizeDto> size) {
-        this.size = size;
+    public void setAddSizeDtoList(List<AddSizeDto> addSizeDtoList) {
+        this.addSizeDtoList = addSizeDtoList;
     }
 }

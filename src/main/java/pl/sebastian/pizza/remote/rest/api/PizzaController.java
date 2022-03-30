@@ -21,7 +21,8 @@ public class PizzaController {
     @PostMapping
     public ResponseEntity<PizzaDto> addPizza(@RequestHeader("Access-Token") String token,
                                              @RequestBody AddPizzaDto addPizzaDto) {
-        return ResponseEntity.ok(null);
+        PizzaDto pizzaDto = pizzaService.addPizza(addPizzaDto, token);
+        return ResponseEntity.ok(pizzaDto);
     }
 
     @PutMapping("/{pizza-id}")
